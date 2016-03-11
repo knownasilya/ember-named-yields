@@ -1,6 +1,6 @@
 {
   "name": "ember-named-yields",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Named Yields for Ember Components",
   "directories": {
     "doc": "doc",
