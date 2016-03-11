@@ -48,6 +48,11 @@ Now to use this component:
 {{/custom-card}}
 ```
 
+## Caveats
+
+This named yield implementation adds extraneous DOM elements to make this work, so keep that in mind when using
+this addon.
+
 ## Advanced
 
 Topics beyond the basic usage.
