@@ -3,9 +3,9 @@
 A stop-gap for the [named yields RFC] and based off the experimentation [here].
 
 ![Ember Version][ember-version]
+[![Ember Observer Score][ember-observer-badge]][ember-observer-url]
 [![NPM][npm-badge-img]][npm-badge-link]
 [![Build Status][travis-badge]][travis-badge-url]
-[![Ember Observer Score][ember-observer-badge]][ember-observer-url]
 
 ## Install
 
