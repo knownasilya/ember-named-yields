@@ -7,6 +7,8 @@ A stop-gap for the [named yields RFC] and based off the experimentation [here].
 [![NPM][npm-badge-img]][npm-badge-link]
 [![Build Status][travis-badge]][travis-badge-url]
 
+[Demo]
+
 ## Install
 
 ```no-highlight
@@ -104,6 +106,7 @@ See the [CONTRIBUTING.md].
 
 [named yields RFC]: https://github.com/emberjs/rfcs/pull/72
 [here]: https://github.com/knownasilya/ember-yielded-portals
+[Demo]: http://knownasilya.github.io/ember-named-yields/
 [CONTRIBUTING.md]: CONTRIBUTING.md
 [npm-badge-img]: https://badge.fury.io/js/ember-named-yields.svg
 [npm-badge-link]: http://badge.fury.io/js/ember-named-yields
