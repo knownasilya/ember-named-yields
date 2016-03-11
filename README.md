@@ -10,28 +10,17 @@ ember install ember-named-yields
 
 ## Usage
 
-Import and use the mixin in your component:
-
-```js
-import Ember from 'ember';
-import NamedYieldMixin from 'ember-named-yields/mixins/named-yield';
-
-export default Ember.Component.extend(NamedYieldMixin, {
-  // your component code..
-});
-```
-
 Setup the named yields in your component template:
 
 ```hbs
-{{named-yield 'header'}}
+{{named-yield this 'header'}}
 
 {{yield (hash
-  header=(component 'yield-for' 'header')
-  footer=(component 'yield-for' 'footer')
+  header=(component 'block-for' this 'header')
+  footer=(component 'block-for' this 'footer')
 )}}
 
-{{named-yield 'footer'}}
+{{named-yield this 'footer'}}
 ```
 
 The `{{yield}}` is the body yield in this example.
@@ -42,7 +31,8 @@ Now to use this component:
 
 ```hbs
 {{#custom-card as |yields|}}
-  Body content anywhere
+  Body content anywhere in the main block
+
   {{#yields.header}}
     Header content here
   {{/yields.header}}

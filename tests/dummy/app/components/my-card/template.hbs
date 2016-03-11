@@ -1,0 +1,12 @@
+<div class="header">
+  {{named-yield 'header'}}
+</div>
+
+<div class="body">
+  {{yield (hash
+    header=(component 'block-for' 'header')
+    named=(component 'block-for')
+  )}}
+</div>
+
+{{named-yield 'footer' class='footer'}}

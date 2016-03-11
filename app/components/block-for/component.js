@@ -1,0 +1,1 @@
+export { default } from 'ember-named-yields/components/block-for/component';
