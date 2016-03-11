@@ -4,7 +4,7 @@
 
 <div class="body">
   {{yield (hash
-    header=(component 'block-for' 'header')
+    header=(component 'block-for' 'header' args=(hash name='header'))
     named=(component 'block-for')
   )}}
 </div>

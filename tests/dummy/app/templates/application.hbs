@@ -6,8 +6,8 @@
   {{#yields.named 'footer'}}
     Footer
   {{/yields.named}}
-  {{#yields.header}}
-    Header
+  {{#yields.header as |args|}}
+    {{args.name}}
   {{/yields.header}}
   Me
 {{/my-card}}

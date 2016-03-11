@@ -2,8 +2,6 @@ import Ember from 'ember';
 import layout from './template';
 import PortalContent from 'ember-portal/components/portal-content';
 
-const { computed } = Ember;
-
 const Component = PortalContent.extend({
   layout: layout,
   tagName: '',

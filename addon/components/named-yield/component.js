@@ -2,10 +2,8 @@ import Ember from 'ember';
 import layout from './template';
 import PortalFor from 'ember-portal/components/portal-for';
 
-const { computed } = Ember;
-
 const Component = PortalFor.extend({
-  //layout: layout,
+  layout: layout,
   classNames: ['named-yield'],
 
   didReceiveAttrs() {

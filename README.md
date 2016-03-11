@@ -22,7 +22,9 @@ Setup the named yields in your component template:
 
 {{yield (hash
   header=(component 'block-for' 'header')
-  footer=(component 'block-for' 'footer')
+  footer=(component 'block-for' 'footer'
+    args=(hash name='footer')
+  )
 )}}
 
 {{named-yield 'footer'}}
@@ -42,8 +44,8 @@ Now to use this component:
     Header content here
   {{/yields.header}}
 
-  {{#yields.footer}}
-    Footer content here
+  {{#yields.footer as |args|}}
+    {{capitalize args.name}} content here
   {{/yields.footer}}
 {{/custom-card}}
 ```
