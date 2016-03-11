@@ -13,14 +13,14 @@ ember install ember-named-yields
 Setup the named yields in your component template:
 
 ```hbs
-{{named-yield this 'header'}}
+{{named-yield 'header'}}
 
 {{yield (hash
-  header=(component 'block-for' this 'header')
-  footer=(component 'block-for' this 'footer')
+  header=(component 'block-for' 'header')
+  footer=(component 'block-for' 'footer')
 )}}
 
-{{named-yield this 'footer'}}
+{{named-yield 'footer'}}
 ```
 
 The `{{yield}}` is the body yield in this example.
