@@ -50,6 +50,10 @@ Now to use this component:
 
 ## Advanced
 
+Topics beyond the basic usage.
+
+### Context
+
 Both `named-yield` and `block-for` components take a second positional param which is "optional" since we fallback
 to a private API, i.e. `parentView`. If you don't want to use the private API, set the context manually.
 
@@ -63,6 +67,28 @@ to a private API, i.e. `parentView`. If you don't want to use the private API, s
 
 {{named-yield 'footer' this}}
 ```
+
+### Dynamic Yield Blocks
+
+To allow more control to the end user, e.g. dynamically set the block to yield to.
+
+```hbs
+{{yield (hash
+  for=(component 'block-for')
+)}}
+```
+
+And can be used like so:
+
+```hbs
+{{#my-card as |yields|}}
+  {{#yields.for 'header'}}
+    Header
+  {{/yields.for}}
+{{/my-card}}
+```
+
+Which allows using `concat` or other helpers to dynamically set the name.
 
 
 ## Contribute
