@@ -48,6 +48,23 @@ Now to use this component:
 {{/custom-card}}
 ```
 
+## Advanced
+
+Both `named-yield` and `block-for` components take a second positional param which is "optional" since we fallback
+to a private API, i.e. `parentView`. If you don't want to use the private API, set the context manually.
+
+```hbs
+{{named-yield 'header' this}}
+
+{{yield (hash
+  header=(component 'block-for' 'header' this)
+  footer=(component 'block-for' 'footer' this)
+)}}
+
+{{named-yield 'footer' this}}
+```
+
+
 ## Contribute
 
 See the [CONTRIBUTING.md].
