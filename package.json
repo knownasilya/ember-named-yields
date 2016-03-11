@@ -1,7 +1,7 @@
 {
   "name": "ember-named-yields",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "Named Yields for Ember Components",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/knownasilya/ember-named-yields",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ilya Radchenko",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -38,7 +38,14 @@
     "ember-try": "~0.0.8"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "portal",
+    "named yields",
+    "slots",
+    "ember",
+    "addon",
+    "cli",
+    "components"
   ],
   "dependencies": {
     "ember-cli-htmlbars": "^1.0.1",
