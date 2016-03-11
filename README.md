@@ -1,26 +1,58 @@
-# Ember-named-yields
+# ember-named-yields
 
-This README outlines the details of collaborating on this Ember addon.
+A stop-gap for the [named yields RFC] and based off the experimentation [here].
 
-## Installation
+## Install
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```no-highlight
+ember install ember-named-yields
+```
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Import and use the mixin in your component:
 
-## Running Tests
+```js
+import Ember from 'ember';
+import NamedYieldMixin from 'ember-named-yields/mixins/named-yield';
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+export default Ember.Component.extend(NamedYieldMixin, {
+  // your component code..
+});
+```
 
-## Building
+Setup the named yields in your component template:
 
-* `ember build`
+```hbs
+{{named-yield 'header'}}
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+{{yield (hash
+  header=(component 'yield-for' 'header')
+  footer=(component 'yield-for' 'footer')
+)}}
+
+{{named-yield 'footer'}}
+```
+
+The `{{yield}}` is the body yield in this example.
+
+## Consume
+
+Now to use this component:
+
+```hbs
+{{#custom-card as |yields|}}
+  Body content anywhere
+  {{#yields.header}}
+    Header content here
+  {{/yields.header}}
+
+  {{#yields.footer}}
+    Footer content here
+  {{/yields.footer}}
+{{/custom-card}}
+```
+
+
+[named yields RFC]: https://github.com/emberjs/rfcs/pull/72
+[here]: https://github.com/knownasilya/ember-yielded-portals
