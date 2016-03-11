@@ -99,6 +99,23 @@ And can be used like so:
 
 Which allows using `concat` or other helpers to dynamically set the name.
 
+### Appending
+
+By default if you call a `block-for` multiple times, it overwrites the previous content. Sometimes
+you might want to append to the previous content.
+
+```hbs
+{{#yields.header append=true}}
+  A
+{{/yields.header}}
+
+{{#yields.header append=true}}
+  B
+{{/yields.header}}
+```
+
+Now the header will have 'AB' as it's contents.
+
 
 ## Contribute
 
