@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import layout from './template';
 import PortalFor from 'ember-portal/components/portal-for';
 
